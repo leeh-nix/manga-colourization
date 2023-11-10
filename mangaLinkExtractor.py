@@ -12,13 +12,8 @@ COOKIE = os.getenv("COOKIE")
 codes = [
     # Your codes
 ]
-# f
-result = []
-# Function to clean up filenames
-# def clean_filename(filename):
-#     cleaned_filename = re.sub(r'[<>:"/\\|?*]', "_", filename)
-#     return cleaned_filename
 
+result = []
 
 headers = {
     "Cookie": f"{COOKIE}",

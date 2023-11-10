@@ -1,3 +1,6 @@
+# Sequential Download
+
+from termcolor import cprint
 import os
 import requests
 import json
@@ -34,10 +37,12 @@ for entry in data:
                     f.write(response.content)
                 print(f"Downloaded: {filename}")
             else:
+                cprint(url, "red")
                 print(
                     f"Failed to download: {filename} (Status code: {response.status_code})"
                 )
         except Exception as e:
+            cprint(url, "green")
             print(f"Failed to download: {filename} ({str(e)})")
 
 print("Download process completed.")
